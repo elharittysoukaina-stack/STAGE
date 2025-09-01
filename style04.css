@@ -1,6 +1,6 @@
  body {
             font-family: Arial, sans-serif;
-            background-color: #d4edda; /* لون الخلفية */
+            background-color: #d4edda; 
             margin: 0;
             padding: 20px;
             text-align: center;
@@ -14,7 +14,7 @@
             margin: auto;
         }
         h1 {
-            color: #007bff; /* لون العنوان */
+            color: #0F4701;
         }
         table {
             width: 100%;
@@ -27,7 +27,7 @@
             text-align: left;
         }
         th {
-            background-color: #007bff;
+            background-color: #0F4701;
             color: white;
         }
         input, textarea, select {
@@ -47,7 +47,7 @@
             width: 48%;
         }
         .btn-confirm {
-            background-color: #007bff;
+            background-color: #0F4701;
         }
         .btn-cancel {
             background-color: #6c757d;

@@ -5,7 +5,7 @@
     }
     
     body {
-      background-color: #B2E8C0; /* خلفية أخضر فاتح */
+      background-color: #B2E8C0; 
       margin: 0;
       font-family: Arial, sans-serif;
       display: flex;
@@ -24,7 +24,7 @@
     .logo {
       width: 100%;
       display: flex;
-      justify-content: flex-start; /* يحط logo على اليسار */
+      justify-content: flex-start; 
       padding: 10px;
     }
 
@@ -35,34 +35,34 @@
 
     .image {
       display: flex;
-      justify-content: flex-end; /* الصورة على اليمين */
-      margin-bottom: 40px;       /* مسافة بين الصورة والنص */
+      justify-content: flex-end; 
+      margin-bottom: 40px;       
       position: absolute;
       top: 100px;
       right: 0;
       z-index: 10;
     }
 .image img {
-  cursor: pointer; /* يعطي يد الإشارة عند hover */
+  cursor: pointer; 
 }
 
     .image img {
-      width: 50px;              /* حجم أكبر قليلاً */
-      height: auto;              /* يحافظ على النسبة */
-      transform: translateX(-30px); /* الصورة تخرج عن الإطار */
+      width: 50px;              
+      height: auto;              
+      transform: translateX(-30px); 
     }
 
     .text {
-      max-width: 1000px;         /* عرض الإطار */
-      margin: 50px auto;        /* وسط الصفحة عرضياً */
-      padding: 30px;             /* المسافة داخل الإطار */
-      border: 6px solid #000000; /* الإطار */
-      border-radius: 30px;       /* زوايا مدورة */
-      background-color: #fff;    /* خلفية الإطار */
-      box-shadow: 0 5px 15px rgba(35, 32, 32, 0.726); /* ظل خفيف */
-      text-align: center;        /* النص وسط الإطار */
-      font-size: 25px;           /* حجم الخط الكبير */
-      font-weight: bold;         /* النص عريض */
-      line-height: 1.4;          /* المسافة بين الأسطر */
+      max-width: 1000px;         
+      margin: 50px auto;        
+      padding: 30px;            
+      border: 6px solid #000000; 
+      border-radius: 30px;      
+      background-color: #fff;   
+      box-shadow: 0 5px 15px rgba(35, 32, 32, 0.726); 
+      text-align: center;        
+      font-size: 25px;           
+      font-weight: bold;         
+      line-height: 1.4;          
       position: relative;
     }

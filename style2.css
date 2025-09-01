@@ -1,5 +1,5 @@
 
-/* Reset بسيط */
+
 * {
   margin: 0;
   padding: 0;
@@ -24,26 +24,21 @@ body {
   border-radius: 16px;
   overflow: hidden;
    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-
 }
 
-/* الصورة على اليسار */
 .image-left {
   flex: 1;
-  display: flex;          /* نخلي flex باش نتحكم فالمحاذاة */
+  display: flex;          
   justify-content: center; 
-
   padding: 20px;
 }
 
 .image-left img {
-
   max-width: 450px;      
   height: auto;
-
  }
 
-/* القسم ديال الفورم */
+
 .login-section {
   flex: 1;
   padding: 50px;
@@ -94,7 +89,7 @@ input {
 }
 
 input:focus {
-  border-color: #a72ecc;
+  border-color: #0e4828;
   box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
 }
 
@@ -106,7 +101,6 @@ input:focus {
   transition: color 0.3s;
   font-weight: 500;
 }
-
 
 
 .rectangle-3 {
@@ -123,27 +117,27 @@ input:focus {
 }
 
 .rectangle-3:hover {
-      background: #087235;
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(11, 58, 31, 0.3);
+    background: #087235;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(11, 58, 31, 0.3);
     }
 
-    /* Messages d'erreur */
-    .error-message {
-      color: #e74c3c;
-      font-size: 13px;
-      margin-top: 6px;
-      display: none;
+    
+.error-message {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 6px;
+    display: none;
     }
 
-    input.error {
-      border-color: #e74c3c;
+.input.error {
+    border-color: #e74c3c;
     }
 
-    /* Logo Azura */
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 10px;
-      width: 120px;
+    
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 120px;
     }

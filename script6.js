@@ -42,6 +42,44 @@
   scales: {
     yAxes: [{ ticks: { beginAtZero: true } }]
   }
+  }
+  });
+  // Sélection des éléments
+const searchInput = document.querySelector(".searchInput");
+const leaveType = document.querySelector(".leaveType");
+const rows = document.querySelectorAll(".my-table tbody tr");
+
+// Fonction de filtrage
+function filterTable() {
+  const searchText = searchInput.value.toLowerCase();
+  const filterValue = leaveType.value.toLowerCase();
+
+  rows.forEach(row => {
+    const name = row.cells[0].textContent.toLowerCase();   // Colonne Nom
+    const status = row.cells[5].textContent.toLowerCase(); // Colonne Statut
+    let shouldShow = true;
+
+    // Filtrer par nom
+    if (searchText && !name.includes(searchText)) shouldShow = false;
+
+    // Filtrer par statut
+    if (filterValue === 'approuve' && status !== 'approuvé') shouldShow = false;
+    else if (filterValue === 'rejete' && status !== 'rejeté') shouldShow = false;
+    else if (filterValue === 'en attente' && status !== 'en attente') shouldShow = false;
+
+    // Afficher ou masquer la ligne
+    row.style.display = shouldShow ? '' : 'none';
+  });
+
+  updateStats(); // Mettre à jour les stats
 }
 
-  });
+// Mise à jour des stats (exemple simple)
+function updateStats() {
+  const visibleRows = Array.from(rows).filter(row => row.style.display !== 'none');
+  console.log(`Nombre de lignes visibles : ${visibleRows.length}`);
+}
+
+// Ajout des événements
+searchInput.addEventListener("input", filterTable);
+leaveType.addEventListener("change", filterTable);

@@ -11,13 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
     return emailRegex.test(email);
   }
   
-
   function showError(input, errorElement, message) {
     errorElement.textContent = message;
     errorElement.style.display = 'block';
     input.classList.add('error');
   }
-  
  
   function hideError(input, errorElement) {
     errorElement.textContent = '';
@@ -25,14 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
     input.classList.remove('error');
   }
   
-
   loginForm.addEventListener('submit', function(e) {
     e.preventDefault();
     let isValid = true;
     
     const emailValue = emailInput.value.trim();
     const passwordValue = passwordInput.value.trim();
-    
     
     if (!emailValue) {
       showError(emailInput, emailError, 'L\'email est requis');
@@ -44,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
       hideError(emailInput, emailError);
     }
     
-  
     if (!passwordValue) {
       showError(passwordInput, passwordError, 'Le mot de passe est requis');
       isValid = false;
@@ -52,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
       hideError(passwordInput, passwordError);
     }
     
-   
     if (isValid) {
       
       if (passwordValue.toLowerCase().includes('manager')) {
@@ -60,12 +54,10 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
       
-      
       if (passwordValue.toLowerCase().includes('rh')) {
         window.location.href = 'page7.html';
         return; 
       }
-      
       
       if (emailValue === 'soukainaelharitty@gmail.com' && passwordValue === 'soukaina') {
         window.location.href = 'page03.html';

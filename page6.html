@@ -16,36 +16,37 @@
     
     <div class="top-bar">
   <div class="left-icon">
-    <img src="https://www.pinterest.com/pin/636907572342401091/.jpg" alt="Menu Icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/2976/2976215.png" alt="Menu Icon">
   </div>
   <div class="right-icons">
-    <img src="https://www.pinterest.com/pin/302726406224621033/.png" alt="notif icon">
-    <img src="https://www.pinterest.com/pin/892557219907798772/sent/?invite_code=9f89e5f00f7d4c29beffeee312f33b45&sender=892557357308169488&sfo=1/" alt="profile">
-    <img src="https://www.pinterest.com/pin/676032594102419257/" alt="exit">
+    <img src="https://cdn-icons-png.flaticon.com/512/1827/1827425.png" alt="notif icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="profile">
+            <img src="https://cdn-icons-png.flaticon.com/512/126/126467.png" alt="exit">
   </div>
 </div>
 
     <div class="first-text">
         <h1>Gestion des demandes de congés </h1>
     </div>
-
-    <hr>
+    
     <div class="second-text">
         <h2>Suivi,validation et mise à jour des congés salariés :</h2>
     </div>
     </hr>
 
 <div class="filter-container">
-    <input type="text" id="searchInput" placeholder="Recherche par nom...">
-    <select id="leaveType" name="leaveType" required>
+    <input type="text" class="searchInput" placeholder="Recherche par nom...">
+    <select class="leaveType" name="leaveType" required>
         <option value="">Filtrer</option>
         <option value="approuve">Approuvé</option>
         <option value="rejete">Rejeté</option>
         <option value="en attente">En attente</option>      
     </select>
 </div>
-
+ <div class="content-container">
+ <div class="table-container">
     <table class="my-table">
+        <thead>
         <tr>
             <th>Nom de l’employé</th>
             <th>Jours demandés</th>
@@ -54,6 +55,8 @@
             <th>Action RH</th>
             <th>Statut</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
             <td>Soukaina</td>
             <td>07</td>
@@ -77,6 +80,7 @@
             <td>Nour</td>
             <td>  </td>
             <td>Approuvé</td>
+            </tr>
         <tr>
             <td>Walid</td>
             <td>09</td>
@@ -85,17 +89,17 @@
             <td></td>
             <td>en attente</td>
         </tr>
+    </tbody>
     </table>
+    </div>
+    </div>
 
 
 <p class="pagination-text">&lt; 1 2 3 &gt;</p>
 
-
 <div class="chart-container" style="width:100%; max-width:700px; margin: 20px auto;">
   <canvas id="myChart"></canvas>
 </div>
-
-
 
     <footer class="footer">
         <div class="footer-top">
