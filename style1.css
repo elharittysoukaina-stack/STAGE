@@ -1,0 +1,191 @@
+* {
+  margin: 0;         /* كيمسح أي margin افتراضي */
+  padding: 0;        /* كيمسح أي padding افتراضي */
+  box-sizing: border-box; /* أي padding أو border يدخل فالحجم الكلي ديال العنصر */
+  font-family: Arial, sans-serif; /* كيعطي font أساسي لجميع العناصر */
+}
+
+body {
+  padding: 0px; /* مسافة صغيرة حول الصفحة */
+}
+
+
+.header {
+  display: flex;               /* العناصر توضع أفقياً */
+  justify-content: space-between; /* الشعار على اليسار و nav على اليمين */
+  align-items: center;         /* جميع العناصر متمركزة عمودياً */
+  padding:  20px 40px;
+  background-color: #B2E8C0;
+}
+
+.header .logo-azura {
+  width: 120px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 600px; 
+  background-image: url("https://c.animaapp.com/mesn2a80Acw4s2/img/5ea53020d68cdd5c6cf4c891f7d33c03-1.png");
+  background-size: cover;       
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;      
+  align-items: center;          
+  text-align: center;
+  color: #ffffff;            
+  padding: 40px 20px;
+
+  
+}
+
+.hero .text-wrapper {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom:60PX;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  padding-left: 30%;
+}
+
+.hero .soumettez-vos {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    padding-left: 30%;
+}
+
+.hero .rectangle {
+  width: 100px;
+  height: 5px;
+  background-color: #28a745; /* مثال لون أخضر */
+  margin-bottom: 30px;
+   
+}
+
+.hero .buttoncommencer {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+ 
+}
+
+.hero .buttoncommencer:hover {
+  background-color: #1e7e34;
+
+}
+
+
+
+.main-nav ul {
+  display: flex;        /* العناصر الداخلية (li) توضع أفقياً */
+  list-style: none;     /* إزالة النقاط */
+  gap: 30px;            /* المسافة بين كل رابط */
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: #28a745;       /* تغيير اللون عند hover */
+}
+
+.below-hero {
+  position: relative;
+  width: 100%;
+  min-height: 500px; /* ارتفاع أولي للsection */
+  background-image: url("https://images.pexels.com/photos/1470171/pexels-photo-1470171.jpeg");
+  background-size: cover;       /* الصورة تغطي كل المساحة */
+  background-position: center;  /* تركيز الصورة في الوسط */
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: left;
+  align-items: center;          /* توسيط المحتوى عمودياً */
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.optimisez-votre-wrapper {
+  max-width: 700px;
+}
+
+.optimisez-votre {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 500;
+  padding-left: 30%;
+  color: #000000; /* نص أبيض باش يبان على الصورة */
+  line-height: 1.6;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5); /* تحسين وضوح النص */
+  position: relative;
+}
+
+
+.footer {
+    font-family: sans-serif;
+    color: #ffffff;
+    margin-top: 0px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 40px;
+    background-color: #B2E8C0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-left img.footer-logo {
+    width: 140px;
+    height: auto;
+}
+
+.footer-center .social-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 50px);
+    grid-template-rows: repeat(2, 50px);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.footer-center .social-icons a img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-right address.contact-info {
+    font-style: normal;
+    line-height: 1.6;
+    color: #000;
+}
+
+.footer-bottom {
+    background-color: #0F4701;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.footer-bottom .text-wrapper-6 {
+    margin: 0;
+    font-size: 14px;
+}
+

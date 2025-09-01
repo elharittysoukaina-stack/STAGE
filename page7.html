@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Gestion des congés</title>
+    <link rel="stylesheet" href="style7.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://azura-group.com/wp-content/uploads/2024/02/azura_logo_footer.webp" alt="logo-azura" />     
+        </div>
+    </header>
+    
+    <div class="top-bar">
+        <div class="left-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/2976/2976215.png" alt="Menu Icon">
+        </div>
+        <div class="right-icons">
+            <img src="https://cdn-icons-png.flaticon.com/512/1827/1827425.png" alt="notif icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="profile">
+            <img src="https://cdn-icons-png.flaticon.com/512/126/126467.png" alt="exit">
+        </div>
+    </div>
+
+    <div class="first-text">
+        <h1>Vérification des congés</h1>
+    </div>
+
+    <div class="filter-container">
+        <input type="text" id="searchInput" placeholder="Recherche par nom...">
+        <select id="leaveType" name="leaveType" required>
+            <option value="">Filtrer</option>
+            <option value="approuve">Approuvé</option>
+            <option value="rejete">Rejeté</option>
+            <option value="en attente">En attente</option>      
+        </select>
+    </div>
+
+    <div class="content-container">
+        <div class="table-container">
+            <table class="my-table">
+                <tr>
+                    <th>Nom de l'employé</th>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Statut Manager</th>
+                    <th>Solde restants</th>
+                    <th>Conformité</th>
+                </tr>
+                <tr>
+                    <td>Mohammed</td>
+                    <td>15/09</td>
+                    <td>Annuel</td>
+                    <td>Accepté</td>
+                    <td>14jours</td>
+                    <td>Confirmé</td>
+                </tr>
+                <tr>
+                    <td>Najat</td>
+                    <td>12/09</td>
+                    <td>Maladie</td>
+                    <td>Accepté</td>
+                    <td>5 jours</td>
+                    <td>Confirmé</td>
+                </tr>
+                <tr>
+                    <td>Fatima</td>
+                    <td>22/09</td>
+                    <td>Urgence</td>
+                    <td>Accepté</td>
+                    <td>2 jours</td>
+                    <td>Payroll update</td>
+                </tr>
+            </table>
+        </div>
+        
+    <div class="stats-highlights">
+        <div class="stat-card">
+            <div class="stat-label">Total employés</div>
+            <div class="stat-value" id="totalEmployees">3</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Jours moyens</div>
+            <div class="stat-value" id="avgDays">7</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Taux d'acceptation</div>
+            <div class="stat-value" id="acceptanceRate">100%</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Demandes ce mois</div>
+            <div class="stat-value" id="requestsThisMonth">3</div>
+        </div>
+    </div>
+
+        <div class="chart-container">
+            <canvas id="leaveChart"></canvas>
+        </div>
+    </div>
+    
+   
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-left">
+                <img class="footer-logo" src="https://azura-group.com/wp-content/uploads/2024/02/azura_logo_footer.webp" alt="logo-azura" /> 
+            </div>
+
+            <div class="footer-center">
+                <div class="social-icons">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook" /></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="Website" /></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn" /></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <address class="contact-info">
+                    <p>📍 Route Tiznit Km 39, Tin Mansour, Quartier Industrielle, Chtouka</p>
+                    <p>📞 +212 (0)528 30 30 00 / 01 / 02</p>
+                    <p>✉️ AZURA@gmail.com</p>
+                </address>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="text-wrapper-6">All rights reserved @2025</p>
+        </div>
+    </footer>
+
+    <script src="script7.js"></script>
+</body>
+</html>

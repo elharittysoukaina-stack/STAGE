@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Gestion des congés</title>
+    <link rel="stylesheet" href="style6.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+  </head>
+  <body>
+    <header>
+         <div class="logo">
+        <img src="https://azura-group.com/wp-content/uploads/2024/02/azura_logo_footer.webp" alt="logo-azura" />     
+     </header>
+    
+    <div class="top-bar">
+  <div class="left-icon">
+    <img src="https://www.pinterest.com/pin/636907572342401091/.jpg" alt="Menu Icon">
+  </div>
+  <div class="right-icons">
+    <img src="https://www.pinterest.com/pin/302726406224621033/.png" alt="notif icon">
+    <img src="https://www.pinterest.com/pin/892557219907798772/sent/?invite_code=9f89e5f00f7d4c29beffeee312f33b45&sender=892557357308169488&sfo=1/" alt="profile">
+    <img src="https://www.pinterest.com/pin/676032594102419257/" alt="exit">
+  </div>
+</div>
+
+    <div class="first-text">
+        <h1>Gestion des demandes de congés </h1>
+    </div>
+
+    <hr>
+    <div class="second-text">
+        <h2>Suivi,validation et mise à jour des congés salariés :</h2>
+    </div>
+    </hr>
+
+<div class="filter-container">
+    <input type="text" id="searchInput" placeholder="Recherche par nom...">
+    <select id="leaveType" name="leaveType" required>
+        <option value="">Filtrer</option>
+        <option value="approuve">Approuvé</option>
+        <option value="rejete">Rejeté</option>
+        <option value="en attente">En attente</option>      
+    </select>
+</div>
+
+    <table class="my-table">
+        <tr>
+            <th>Nom de l’employé</th>
+            <th>Jours demandés</th>
+            <th>Motif</th>
+            <th>Remplaçant</th>
+            <th>Action RH</th>
+            <th>Statut</th>
+        </tr>
+        <tr>
+            <td>Soukaina</td>
+            <td>07</td>
+            <td>vacance</td>
+            <td>Fouad</td>
+            <td> </td>
+            <td>en attente</td>
+        </tr>
+        <tr>
+            <td>Farah</td>
+            <td>O1</td>
+            <td>maladie</td>
+            <td>Monsif</td>
+            <td>  </td>
+            <td>Rejeté</td>
+        </tr>
+        <tr>
+            <td>Mounia</td>
+            <td>05</td>
+            <td>voyage</td>
+            <td>Nour</td>
+            <td>  </td>
+            <td>Approuvé</td>
+        <tr>
+            <td>Walid</td>
+            <td>09</td>
+            <td>urgence</td>
+            <td>Wafa</td>
+            <td></td>
+            <td>en attente</td>
+        </tr>
+    </table>
+
+
+<p class="pagination-text">&lt; 1 2 3 &gt;</p>
+
+
+<div class="chart-container" style="width:100%; max-width:700px; margin: 20px auto;">
+  <canvas id="myChart"></canvas>
+</div>
+
+
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-left">
+                <img class="footer-logo" src="https://azura-group.com/wp-content/uploads/2024/02/azura_logo_footer.webp" alt="logo-azura" /> 
+            </div>
+
+            <div class="footer-center">
+                <div class="social-icons">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook" /></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="Website" /></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn" /></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <address class="contact-info">
+                    <p>📍 Route Tiznit Km 39, Tin Mansour, Quartier Industrielle, Chtouka</p>
+                    <p>📞 +212 (0)528 30 30 00 / 01 / 02</p>
+                    <p>✉️ AZURA@gmail.com</p>
+                </address>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="text-wrapper-6">All rights reserved @2025</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+     <script src="script6.js"></script>    
+</body>
+</html>

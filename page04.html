@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azura - Demande</title>
+    <link rel="stylesheet" href="style04.css" />
+ 
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bienvenue SOUKAINA</h1>
+        <p>Remplissez le formulaire ci-dessous pour créer votre nouvelle demande</p>
+
+        <table>
+            <tr>
+                <th>Champ</th>
+                <th>Détails</th>
+            </tr>
+            <tr>
+                <td>Employee ID</td>
+                <td><input type="text" id="employeeId" name="employeeId" required></td>
+            </tr>
+           <tr>
+            <tr>
+    <td>Poste</td>
+    <td>
+        <input type="text" id="position" name="position" required>
+        <span class="error-message" id="positionError"></span>
+    </td>
+</tr>
+
+    <td>Employee Shift</td>
+    <td>
+        <select id="employeeShift" name="employeeShift" required>
+            <option value="">-- Select Shift --</option>
+            <option value="morning">Morning</option>
+            <option value="night">Night</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td>Type de Congé </td>
+    <td>
+        <select id="leaveType" name="leaveType" required>
+            <option value="">Sélectionnez un type</option>
+            <option value="vacation">Congés Payés</option>
+            <option value="sick">Congé Maladie</option>
+            <option value="personal">Congé Personnel</option>
+            <option value="maternity">Congé Maternité</option>
+            <option value="paternity">Congé Paternité</option>
+            <option value="unpaid">Congé Sans Solde</option>
+        </select>
+    </td>
+</tr>
+            <tr>
+                <td>Start Date</td>
+                <td><input type="date" id="startDate" name="startDate" required></td>
+            </tr>
+            <tr>
+                <td>End Date</td>
+                <td><input type="date" id="endDate" name="endDate" required></td>
+            </tr>
+            <tr>
+                <td>Attachments</td>
+                <td><input type="file" id="attachments" name="attachments"></td>
+            </tr>
+             <tr>
+                <td>Request Details</td>
+                <td><textarea id="requestDetails" name="requestDetails" rows="4" required></textarea></td>
+            </tr>
+        </table>
+
+        <div class="button-container">
+            <button type="submit" class="btn btn-confirm">Confirmer</button>
+            <button type="reset" class="btn btn-cancel">Annuler</button>
+        </div>
+    </div>
+
+    <script src="script4.js"></script>
+
+</body>
+</html>
