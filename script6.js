@@ -1,4 +1,4 @@
-// Fonctionnalité pour les actions RH (Approuver/Rejeter)
+// Fonctionnalité pour les actions manager (Approuver/Rejeter)
 document.addEventListener('DOMContentLoaded', function() {
     // Ajouter les icônes d'action dans chaque ligne du tableau
     const actionCells = document.querySelectorAll('.my-table tbody td:nth-child(5)');
