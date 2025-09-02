@@ -142,4 +142,30 @@ document.addEventListener('DOMContentLoaded', function() {
         // ✅ تحديث الإحصائيات بعد الفلترة
         updateStats();
     }
+  
+
+
+    // اختيار العناصر
+    const openBtn = document.getElementById('openBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    // فتح Sidebar
+    openBtn.addEventListener('click', () => {
+        sidebar.style.width = '280px';
+        overlay.classList.add('active');
+    });
+
+    // غلق Sidebar بالـ X
+    closeBtn.addEventListener('click', () => {
+        sidebar.style.width = '0';
+        overlay.classList.remove('active');
+    });
+
+    // غلق Sidebar بالضغط على Overlay
+    overlay.addEventListener('click', () => {
+        sidebar.style.width = '0';
+        overlay.classList.remove('active');
+    });
 });

@@ -15,7 +15,6 @@ body {
     line-height: 1.6;
 }
 
-
 div.logo {
     width: 100%;
     background-color: #B2E8C0;
@@ -31,34 +30,136 @@ div.logo img {
     height: auto;
 }
 
+/* ✅ Top Bar */
 .top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    border-bottom: 1px solid #a3a1a1;
-    background-color: white;
- 
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 12px 25px;
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.left-icon img, .right-icons img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
+.open-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.3s;
 }
 
-.left-icon img:hover, .right-icons img:hover {
-    transform: scale(1.1);
+.open-btn:hover {
+    background: #f0f0f0;
+}
+
+.open-btn img {
+    width: 32px;
+    height: 32px;
 }
 
 .right-icons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    align-items: center;
 }
 
+.icon-wrapper {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f5f5f5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icon-wrapper:hover {
+    background: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.icon-wrapper img {
+    width: 22px;
+    height: 22px;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff4757;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ✅ Sidebar - من الجانب الأيسر */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 70px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 1px solid #f1f1f1;
+    text-align: left;
+}
+
+.sidebar a:hover {
+    background: #f9f9f9;
+    color: #0F4701;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    left: auto;
+    font-size: 36px;
+    border: none;
+    background: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
 
 .first-text {
     font-size: 24px;
@@ -83,8 +184,8 @@ div.logo img {
     gap: 30px;
     margin: 20px 0 30px;
     flex-wrap: wrap;
-
 }
+
 .searchInput, .leaveType {
     padding: 12px 15px;
     border: 1px solid #ccc;
@@ -96,15 +197,16 @@ div.logo img {
 .searchInput {
     width: 300px;
 }
+
 .leaveType {
     width: 180px;
 }
+
 .searchInput:focus, .leaveType:focus {
     outline: none;
     border-color: #4CAF50;
     box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
 }
-
 
 .content-container {
     display: flex;
@@ -124,9 +226,7 @@ div.logo img {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     overflow-x: auto;
-    
 }
-
 
 .my-table {
     width: 90%;
@@ -140,10 +240,9 @@ th, td {
     text-align: center;
 }
 
-tr,td :nth-child(even) {
+tr,td:nth-child(even) {
     background-color: #f2f2f2;
 }
-
 
 th {
     background-color: #0F4701;
@@ -151,7 +250,6 @@ th {
     position: sticky;
     top: 0;
 }
-
 
 .chart-container {
     flex: 1;
@@ -170,7 +268,6 @@ th {
     margin: 0 auto;
 }
 
-
 .stats-highlights {
     display: flex;
     flex-wrap: wrap;
@@ -179,9 +276,6 @@ th {
     margin: 30px 0;
 }
 
-
-
-
 .stat-value {
     font-size: 2rem;
     font-weight: bold;
@@ -189,9 +283,6 @@ th {
     margin: 10px 0;
 }
 
-
-
-/* Pagination */
 .pagination-text {
     text-align: center;
     font-size: 18px;
@@ -200,7 +291,6 @@ th {
     margin: 30px 0;
     letter-spacing: 3px;
 }
-
 
 .footer {
     font-family: sans-serif;
@@ -258,4 +348,29 @@ th {
 .footer-bottom .text-wrapper-6 {
     margin: 0;
     font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 10px 15px;
+    }
+    
+    .icon-wrapper {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .icon-wrapper img {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .searchInput {
+        width: 250px;
+    }
+    
+    .table-container, .chart-container {
+        min-width: 300px;
+    }
 }

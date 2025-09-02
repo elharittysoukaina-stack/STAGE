@@ -14,15 +14,37 @@
     </header>
 
     <div class="top-bar">
-  <div class="left-icon">
-     <img src="https://cdn-icons-png.flaticon.com/512/2976/2976215.png" alt="Menu Icon">
-  </div>
-  <div class="right-icons">
-    <img src="https://cdn-icons-png.flaticon.com/512/1827/1827425.png" alt="notif icon">
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="profile">
-            <img src="https://cdn-icons-png.flaticon.com/512/126/126467.png" alt="exit">
-  </div>
-</div>
+      
+        <button id="openBtn" class="open-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/2976/2976215.png" alt="Menu">
+        </button>
+
+        <div class="right-icons">
+            <div class="icon-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/1827/1827425.png" alt="notif icon">
+                <span class="notification-badge">3</span>
+            </div>
+            <div class="icon-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="profile">
+            </div>
+            <div class="icon-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/126/126467.png" alt="exit">
+            </div>
+        </div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" id="closeBtn">&times;</a>
+        <a href="#"><i class="fas fa-home"></i> Accueil</a>
+        <a href="#"><i class="fas fa-calendar-alt"></i> Mes demandes</a>
+        <a href="#"><i class="fas fa-history"></i> Historique</a>
+        <a href="#"><i class="fas fa-cog"></i> Paramètres</a>
+        <a href="#"><i class="fas fa-question-circle"></i> Aide</a>
+        <a href="#"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+    </div>
+
+
+    <div class="overlay" id="overlay"></div>
 
 <div class="welcome-text">
 <h1>Bienvenue Soukaina</h1>
