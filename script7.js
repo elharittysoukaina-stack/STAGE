@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // ✅ يطبع رسالة في console لتأكيد أن السكريبت محمل
+    
     console.log("Script chargé!");
     
-    // ✅ اختيار الجدول وDIVs اللي فيها الإحصائيات
+    
     const table = document.querySelector('.my-table');
     const statCards = {
         totalEmployees: document.getElementById('totalEmployees'),
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         requestsThisMonth: document.getElementById('requestsThisMonth')
     };
 
-    // ✅ دالة لاستخراج البيانات من الجدول
+    
     function extractTableData() {
         const rows = table.querySelectorAll('tr:not(:first-child)');
         const employees = [];
@@ -21,21 +21,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         rows.forEach(row => {
             const cells = row.querySelectorAll('td');
-            employees.push(cells[0].textContent); // اسم الموظف
+            employees.push(cells[0].textContent); 
             
-            // تحويل النص "14jours" إلى رقم 14
             const daysText = cells[4].textContent;
             const daysValue = parseInt(daysText);
             days.push(daysValue);
             
-            types.push(cells[2].textContent); // نوع الإجازة
-            statuses.push(cells[3].textContent.trim().toLowerCase()); // حالة المدير
+            types.push(cells[2].textContent); 
+            statuses.push(cells[3].textContent.trim().toLowerCase()); 
         });
 
         return { employees, days, types, statuses };
     }
 
-    // ✅ دالة لتحديث الإحصائيات في الواجهة
+    
     function updateStats() {
         const { employees, days, statuses } = extractTableData();
         const totalEmployees = employees.length;
@@ -43,24 +42,24 @@ document.addEventListener('DOMContentLoaded', function() {
         let totalDays = 0;
         let acceptedCount = 0;
 
-        days.forEach(day => { totalDays += day; }); // مجموع الأيام
+        days.forEach(day => { totalDays += day; }); 
 
         statuses.forEach(status => {
-            if(status === 'accepté') acceptedCount++; // عدد الطلبات المقبولة
+            if(status === 'accepté') acceptedCount++; 
         });
 
         const avgDays = totalEmployees ? Math.round(totalDays / totalEmployees) : 0;
         const acceptanceRate = totalEmployees ? Math.round((acceptedCount / totalEmployees) * 100) : 0;
         const requestsThisMonth = totalEmployees;
 
-        // ✅ تحديث العناصر في الصفحة
+        
         statCards.totalEmployees.textContent = totalEmployees;
         statCards.avgDays.textContent = avgDays;
         statCards.acceptanceRate.textContent = acceptanceRate + '%';
         statCards.requestsThisMonth.textContent = requestsThisMonth;
     }
 
-    // ✅ دالة لإنشاء الرسم البياني باستخدام Chart.js
+
     function createChart() {
         const { employees, days } = extractTableData();
         const ctx = document.getElementById('leaveChart').getContext('2d');
@@ -107,11 +106,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ✅ تشغيل التحديث والرسوم البيانية لأول مرة
+   
     updateStats();
     createChart();
 
-    // ✅ إعداد الفلاتر للبحث والفلترة حسب نوع الإجازة
+    
     const searchInput = document.getElementById('searchInput');
     const leaveTypeFilter = document.getElementById('leaveType');
     
@@ -128,23 +127,20 @@ document.addEventListener('DOMContentLoaded', function() {
             const status = row.querySelector('td:nth-child(4)').textContent.trim().toLowerCase();
             let shouldShow = true;
             
-            // 🔹 فلترة حسب الاسم
+           
             if (searchText && name.indexOf(searchText) === -1) shouldShow = false;
             
-            // 🔹 فلترة حسب حالة المدير
-            if (filterValue === 'approuve' && status !== 'accepté') shouldShow = false;
+          
+            if (filterValue === 'accepté' && status !== 'accepté') shouldShow = false;
             else if (filterValue === 'rejete' && status !== 'rejeté') shouldShow = false;
             else if (filterValue === 'en attente' && status !== 'en attente') shouldShow = false;
             
             row.style.display = shouldShow ? '' : 'none';
         });
         
-        // ✅ تحديث الإحصائيات بعد الفلترة
         updateStats();
     }
   
-
-
     // اختيار العناصر
     const openBtn = document.getElementById('openBtn');
     const closeBtn = document.getElementById('closeBtn');
@@ -157,15 +153,104 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.classList.add('active');
     });
 
-    // غلق Sidebar بالـ X
+    
     closeBtn.addEventListener('click', () => {
         sidebar.style.width = '0';
         overlay.classList.remove('active');
     });
 
-    // غلق Sidebar بالضغط على Overlay
+    
     overlay.addEventListener('click', () => {
         sidebar.style.width = '0';
         overlay.classList.remove('active');
     });
 });
+
+// Initialisation après le chargement du document
+document.addEventListener('DOMContentLoaded', function() {
+    const notificationIcon = document.getElementById('notificationIcon');
+    const notificationPanel = document.getElementById('notificationPanel');
+    const markReadButton = document.querySelector('.mark-read');
+    const notificationBadge = document.querySelector('.notification-badge');
+    const unreadNotifications = document.querySelectorAll('.notification-item.unread');
+    
+    // Gérer le clic sur l'icône de notification
+    if (notificationIcon) {
+        notificationIcon.addEventListener('click', function(e) {
+            e.stopPropagation();
+            notificationPanel.classList.toggle('active');
+        });
+    }
+    
+    // Marquer toutes les notifications comme lues
+    if (markReadButton) {
+        markReadButton.addEventListener('click', function() {
+            unreadNotifications.forEach(notification => {
+                notification.classList.remove('unread');
+            });
+            
+            // Mettre à jour le badge
+            if (notificationBadge) {
+                notificationBadge.textContent = '0';
+                notificationBadge.style.backgroundColor = '#95a5a6';
+                notificationBadge.style.animation = 'none';
+            }
+            
+            // Masquer le panneau après un court délai
+            setTimeout(() => {
+                notificationPanel.classList.remove('active');
+            }, 800);
+        });
+    }
+    
+    // Fermer le panneau de notifications en cliquant à l'extérieur
+    document.addEventListener('click', function(e) {
+        if (notificationPanel && !notificationPanel.contains(e.target) && 
+            (!notificationIcon || !notificationIcon.contains(e.target))) {
+            notificationPanel.classList.remove('active');
+        }
+    });
+    
+    // Empêcher la fermeture lors du clic à l'intérieur du panneau
+    if (notificationPanel) {
+        notificationPanel.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+});
+
+// Fonction pour ajouter une nouvelle notification
+function addNotification(message, isUnread = true) {
+    const notificationPanel = document.getElementById('notificationPanel');
+    const notificationsContainer = notificationPanel.querySelector('h3').nextElementSibling;
+    
+    // Créer un nouvel élément de notification
+    const newNotification = document.createElement('div');
+    newNotification.className = isUnread ? 'notification-item unread' : 'notification-item';
+    
+    // Ajouter l'icône et le texte
+    newNotification.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="info">
+        <p>${message}</p>
+    `;
+    
+    // Insérer au début de la liste
+    notificationsContainer.parentNode.insertBefore(newNotification, notificationsContainer);
+    
+    // Mettre à jour le badge
+    const badge = document.querySelector('.notification-badge');
+    if (badge && isUnread) {
+        const currentCount = parseInt(badge.textContent) || 0;
+        badge.textContent = currentCount + 1;
+        badge.style.backgroundColor = '#e74c3c';
+        badge.style.animation = 'pulse 1.5s infinite';
+    }
+}
+
+// Fonction pour afficher/masquer le panneau
+function toggleNotificationPanel() {
+    const panel = document.getElementById('notificationPanel');
+    if (panel) {
+        panel.classList.toggle('active');
+    }
+}

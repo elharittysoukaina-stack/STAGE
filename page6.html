@@ -23,10 +23,30 @@
 
         
         <div class="right-icons">
-            <div class="icon-wrapper">
+            <div class="right-icons">
+            <div class="icon-wrapper" id="notificationIcon">
                 <img src="https://cdn-icons-png.flaticon.com/512/1827/1827425.png" alt="notif icon">
                 <span class="notification-badge">3</span>
             </div>
+        </div>
+        
+        <div class="notification-panel" id="notificationPanel">
+            <h3>Notifications</h3>
+            <div class="notification-item unread">
+                <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="info">
+                <p>Nouveau message reçu</p>
+            </div>
+            <div class="notification-item unread">
+                <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="alert">
+                <p>Votre profil a été mis à jour</p>
+            </div>
+            <div class="notification-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/929/929429.png" alt="event">
+                <p>Rappel : Réunion à 15h00</p>
+            </div>
+            <span class="mark-read">Marquer comme lu</span>
+        </div>
+
             <div class="icon-wrapper">
                 <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="profile">
             </div>
@@ -70,41 +90,40 @@
 </div>
  <div class="content-container">
  <div class="table-container">
-    <table class="my-table">
-        <thead>
-        <tr>
-            <th>Nom de l’employé</th>
-            <th>Jours demandés</th>
-            <th>Motif</th>
-            <th>Remplaçant</th>
-            <th>Action RH</th>
-            <th>Statut</th>
-        </tr>
-        </thead>
+  <table class="my-table">
+    <tr>
+        <th>Nom de l'employé</th>
+        <th>Jours demandés</th>
+        <th>Motif</th>
+        <th>Remplaçant</th>
+        <th class="action-rh">Action RH</th> 
+        <th>Statut</th>
+    </tr>
+
         <tbody>
         <tr>
             <td>Soukaina</td>
             <td>07</td>
             <td>vacance</td>
             <td>Fouad</td>
-            <td> </td>
-            <td>en attente</td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <td>Farah</td>
             <td>O1</td>
             <td>maladie</td>
             <td>Monsif</td>
-            <td>  </td>
-            <td>Rejeté</td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <td>Mounia</td>
             <td>05</td>
             <td>voyage</td>
             <td>Nour</td>
-            <td>  </td>
-            <td>Approuvé</td>
+            <td></td>
+            <td></td>
             </tr>
         <tr>
             <td>Walid</td>
@@ -112,7 +131,7 @@
             <td>urgence</td>
             <td>Wafa</td>
             <td></td>
-            <td>en attente</td>
+            <td></td>
         </tr>
     </tbody>
     </table>
@@ -154,18 +173,6 @@
             <p class="text-wrapper-6">All rights reserved @2025</p>
         </div>
     </footer>
-
-
-
-
-
-
-
-
-
-
-
-
      <script src="script6.js"></script>    
 </body>
 </html>
