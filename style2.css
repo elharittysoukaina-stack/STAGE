@@ -141,3 +141,53 @@ input:focus {
     left: 10px;
     width: 120px;
     }
+
+    /* Media Queries */
+
+/* للPC الكبيرة */
+@media (max-width: 1366px) {
+    .login-section {
+        padding: 40px;
+    }
+    .image-left img {
+        max-width: 400px;
+    }
+}
+
+/* للPC المتوسطة */
+@media (max-width: 1024px) {
+    .login-page {
+        flex-direction: column;  /* الصورة فوق الفورم */
+        max-width: 600px;
+    }
+    .image-left {
+        justify-content: center;
+        padding: 10px;
+    }
+    .login-section {
+        padding: 30px;
+    }
+    .image-left img {
+        max-width: 300px;
+    }
+}
+
+/* للPC الصغيرة واللاب توب الصغير */
+@media (max-width: 768px) {
+    .login-page {
+        flex-direction: column;
+        width: 90%;
+    }
+    .login-section {
+        padding: 20px;
+    }
+    .login-section .d {
+        font-size: 28px;
+    }
+    .login-section .p {
+        font-size: 14px;
+    }
+    .image-left img {
+        max-width: 250px;
+    }
+}

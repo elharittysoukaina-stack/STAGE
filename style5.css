@@ -66,3 +66,58 @@
       line-height: 1.4;          
       position: relative;
     }
+    /* ========================= */
+/* Responsive pour PC */
+/* ========================= */
+
+/* Ultra-large PC >= 1920px */
+@media (min-width: 1920px) {
+    .text {
+        font-size: 32px;
+        padding: 40px;
+        max-width: 1200px;
+    }
+    .image img {
+        width: 70px;
+        transform: translateX(-40px);
+    }
+}
+
+/* Large PC 1440px à 1919px */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .text {
+        font-size: 30px;
+        padding: 35px;
+        max-width: 1100px;
+    }
+    .image img {
+        width: 60px;
+        transform: translateX(-35px);
+    }
+}
+
+/* Medium PC 1200px à 1439px */
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .text {
+        font-size: 28px;
+        padding: 30px;
+        max-width: 1000px;
+    }
+    .image img {
+        width: 55px;
+        transform: translateX(-30px);
+    }
+}
+
+/* Small PC 992px à 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .text {
+        font-size: 26px;
+        padding: 25px;
+        max-width: 900px;
+    }
+    .image img {
+        width: 50px;
+        transform: translateX(-25px);
+    }
+}

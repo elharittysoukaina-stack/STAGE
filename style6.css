@@ -506,3 +506,48 @@ th {
     margin: 0;
     font-size: 14px;
 }
+
+
+/* ========================= */
+/* Responsive pour PC uniquement */
+/* ========================= */
+
+/* PC ultra-large >= 1920px */
+@media (min-width: 1920px) {
+    .searchInput { width: 400px; font-size: 18px; }
+    .leaveType { width: 220px; font-size: 18px; }
+    .content-container { max-width: 1800px; gap: 40px; }
+    .table-container, .chart-container { min-width: 700px; padding: 25px; }
+    .stat-value { font-size: 2.8rem; }
+    .stat-label { font-size: 1rem; }
+}
+
+/* PC large 1440px à 1919px */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .searchInput { width: 350px; font-size: 17px; }
+    .leaveType { width: 200px; font-size: 17px; }
+    .content-container { max-width: 1600px; gap: 35px; }
+    .table-container, .chart-container { min-width: 650px; padding: 22px; }
+    .stat-value { font-size: 2.5rem; }
+    .stat-label { font-size: 0.95rem; }
+}
+
+/* PC medium 1200px à 1439px */
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .searchInput { width: 320px; font-size: 16px; }
+    .leaveType { width: 180px; font-size: 16px; }
+    .content-container { max-width: 1400px; gap: 30px; }
+    .table-container, .chart-container { min-width: 600px; padding: 20px; }
+    .stat-value { font-size: 2.2rem; }
+    .stat-label { font-size: 0.9rem; }
+}
+
+/* PC small 992px à 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .searchInput { width: 280px; font-size: 15px; }
+    .leaveType { width: 150px; font-size: 15px; }
+    .content-container { max-width: 1200px; gap: 25px; }
+    .table-container, .chart-container { min-width: 500px; padding: 18px; }
+    .stat-value { font-size: 2rem; }
+    .stat-label { font-size: 0.85rem; }
+}
